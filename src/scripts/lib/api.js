@@ -13,6 +13,7 @@ export default async function callApi(method, url, data, cb) {
       cb && cb({ result: result, msg: 'OK' });
     })
     .catch((error) => {
+      console.log(error);
       cb && cb({ result: error, msg: 'ERROR' });
     });
 }

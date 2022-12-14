@@ -15,15 +15,13 @@ let columns = [
   { header: 'ip', key: 'ip', width: 25 },
   { header: '등록날짜', key: 'publishedDate', width: 30 },
 ];
-const loadingPopup = document.getElementsByClassName('loadingPopup')[0];
 
 window.onload = () => {
   api('get', 'admin/check', undefined, (res) => {
     if (res) {
       if (res.msg && res.msg == 'ERROR') {
-        console.log(res);
-        //location.href = 'admin.html';
-        //return;
+        location.href = 'admin.html';
+        return;
       }
 
       document.getElementById('prev').onclick = () => {
@@ -83,7 +81,7 @@ window.onload = () => {
           }
         );
       };
-
+      onClickLogoutButton();
       document.getElementsByTagName('body')[0].style.display = 'block';
     }
   });
@@ -127,12 +125,12 @@ function onloadUserTable() {
             <td>${item.ip}</td>
             <td>${new Date(item.publishedDate).YYYYMMDDHHMMSS()}</td>
             <td>
-                <span href="admin-member-edit.html" id="update_${index}" data-val="${
+                <button type="button" id="update_${index}" data-val="${
             item._id
-          }" class="btn btn-primary">수정</span>
-                <span href="javascript: void(0);" id="delete_${index}" data-val="${
+          }" class="btn btn-primary">수정</button>
+                <button type="button" id="delete_${index}" data-val="${
             item._id
-          }" class="btn btn-cancel">삭제</span>
+          }" class="btn btn-cancel">삭제</button>
             </td>
             </tr>`;
         });
@@ -173,6 +171,21 @@ function onloadUserTable() {
       }
     }
   });
+}
+
+function onClickLogoutButton() {
+  document.getElementById('logout').onclick = () => {
+    api('post', 'admin/logout', undefined, (res) => {
+      if (res) {
+        if (res.msg == 'OK') {
+          alert('로그아웃 되었습니다.');
+          location.href = 'admin.html';
+        } else {
+          alert('오류가 발생했습니다.');
+        }
+      }
+    });
+  };
 }
 
 function pad(number, length) {
