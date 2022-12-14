@@ -34,7 +34,7 @@ header {
     ul {
       position: absolute;
       top: 50%;
-      right: 0;
+      right: 30px;
       transform: translateY(-50%);
 
       li {
@@ -55,23 +55,11 @@ header {
         li {
           float: left;
 
-          &.current, &.active {
-            .dep01 {
-              background-color: #464646;
-              color: #ffd600;
+          .dep01 {
+            &.current, &.active {
+              background-color: #fff;
+              color: #707070;
             }
-
-            .dep02 {
-              display: block;
-            }
-          }
-
-          &.current {
-            .dep02 {z-index: 0;}
-          }
-
-          &.active {
-            .dep02 {z-index: 1;}
           }
 
           .dep01 {
@@ -82,27 +70,9 @@ header {
             font-size: 1.5rem;
             font-weight: 700;
             text-align: center;
-            color: #707070;
-            background-color: #fff;
-          }
-
-          .dep02 {
-            display: none;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 40px;
+            text-decoration: none;
             background-color: #464646;
-
-            li {
-              padding: 0 15px;
-              line-height: 4rem;
-
-              a {
-                font-size: 1.3rem;
-                color: #fff;
-              }
-            }
+            color: #999;
           }
         }
 
@@ -138,6 +108,36 @@ header {
 
   &-section {
     margin-top: 30px;
+  }
+
+  &-group {
+    + .contents-group {
+      margin-top: 50px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 500px;
+      border: 1px solid #b4b4b4;
+      border-radius: 3px;
+      font-family: 'NanumSquareNeoLight', sans-serif;
+      font-size: 1.7rem;
+      box-sizing: border-box;
+    }
+
+    input[type="text"] {
+      padding: 9px 10px;
+    }
+
+    textarea {
+      resize: none;
+      padding: 15px;
+      height: 300px;
+    }
+
+    + .btn-wrap {
+      margin-top: 30px;
+    }
   }
 
   &-top {

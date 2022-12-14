@@ -21,8 +21,9 @@ window.onload = () => {
   api('get', 'admin/check', undefined, (res) => {
     if (res) {
       if (res.msg && res.msg == 'ERROR') {
-        location.href = 'admin.html';
-        return;
+        console.log(res);
+        //location.href = 'admin.html';
+        //return;
       }
 
       document.getElementById('prev').onclick = () => {
