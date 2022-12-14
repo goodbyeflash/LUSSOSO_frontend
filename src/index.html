@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <title>루쏘소</title>
   </head>
-  <body>
+  <body style="display: none;">
     <section class="main-img pc">
-      <img src="images/pc-contents.jpg" alt="">
+      <img id="pcImg" src="images/pc-contents.jpg" alt="">
     </section>
 
     <section class="main-img mb">
-      <img src="images/mobile-contents.jpg" alt="">
+      <img id="moImg" src="images/mobile-contents.jpg" alt="">
     </section>
 
     <section class="section3">
@@ -28,8 +28,8 @@
           </div>
 
           <div class="form-group">
-            <label for="number">연락처</label>
-            <input type="text" id="number">
+            <label for="hp">연락처</label>
+            <input type="text" id="hp" maxlength="11">
           </div>
 
           <div class="form-group">
@@ -39,7 +39,33 @@
 
           <div class="form-group agreement">
             <label for="agree">개인정보 수집 동의</label>
-            <textarea id="agree" disabled></textarea>
+            <textarea id="agree" disabled>【개인정보 수집∙이용 동의서】
+
+              “(주)루쏘소에프앤에프”는 (이하 ‘회사’는) 고객님의 개인정보를 중요시하며, “개인정보보호법” 등을 준수하고 있습니다. 회사는 관련법률에 의하여 고객님께서 제공하는 개인정보가 어떠한 용도와 방식으로 수집∙이용되는 지를 알려드리며, 이에 대한 고객님의 동의를 받고자 합니다. 개인정보처리에 관한 자세한 사항은 당사 홈페이지(www.lussoso.com)에 공개하고 있는 “개인정보처리방침”을 참고하시기 바랍니다.
+              
+              회사는 이벤트의 신청, 대상자 확인, 경품지급 등을 위하여 고객님의 개인정보를 수집∙이용하고 있으며, 이를 위하여 회사는 고객님으로부터 동의를 얻어야 합니다. 고객님은 아래의 내용을 확인하시고, 고객님의 개인정보 수집∙이용 동의 여부를 표시하여 주시기 바랍니다.
+              
+              개인정보 수집∙이용에 관한 사항
+              1) 수집∙이용 목적
+              - 이벤트의 신청, 당첨자의 선정, 상품 및 경품지급 등 이벤트 진행
+              - 이벤트 현황 중계, 당첨자의 홈페이지 및 모바일 공지사항에 게시
+              2) 수집∙이용할 개인정보
+              - 이벤트 포상 목적 : 이름, 휴대전화번호, 계약한 지점
+              3) 개인정보 보유∙이용 기간
+              - 관련법령의 규정이 정하는 기간까지(단, 보유기간 경과, 개인정보의 처리 목적달성 등 그 개인정보가 불필요하게 되었을 때에는 지체없이 파기)
+              4) 동의를 거부할 권리 및 동의를 거부할 경우의 불이익
+              - 고객님께서는 개인정보 수집∙이용에 대한 동의를 거부할 수 있습니다. 다만, 동의하지 아니한 경우 본 이벤트 참가가 불가능합니다.
+               
+              ※ 위 목적으로 본인의 개인정보를 수집∙이용하는 것에 동의합니다.
+              
+              【LUSSOSO THE FANTASTIC 20 - THE FANTASTIC GIFT 이벤트 유의사항】
+              
+              1. 이벤트 대상 고객은 루쏘소에서 맞춤정장 1벌 이상 계약한 고객이어야 합니다.
+              2. 동일 계약 건으로 중복 참여는 불가합니다.
+              3. 이벤트 당첨 시 제품 수령에 필요한 주소지 정보를 요청할 수 있습니다.
+              4. 이벤트 경품 수령으로 발생하는 제세공과금은 루쏘소에서 부담하며, 제세공과금 처리를 위한 추가 서류(신분증 등)를 요청할 수 있습니다.
+              5. 이벤트 참여를 위해 제공된 정보는 본 이벤트 이외의 목적으로 사용되지 않습니다.
+              </textarea>
           </div>
 
           <div class="form-check">
@@ -54,32 +80,6 @@
 
     <section class="section4">
       <div class="inner">
-        <h1>유의사항</h1>
-
-        <ul>
-          <li>루쏘소 ‘맞춤정장 1벌’당 1회 참여 기회가 제공됩니다. 동일 계약 건으로 중복 참여하실 수 없습니다.</li>
-          <li>맞춤정장을 계약한 계약자의 성함과 연락처, 맞추신 지점을 정확하게 입력해 주세요.</li>
-          <li>루쏘소 ‘맞춤정장’ 계약 고객이 아닌 경우에는 이벤트 참여 대상에서 제외됩니다.</li>
-          <li>
-            본 이벤트 페이지에 입력하실 개인정보는 루쏘소 지점에 등록해 주신 계약자(고객) 정보와 동일해야 합니다.<br>
-            (불일치시 이벤트 참여 대상에서 제외됩니다.)
-          </li>
-          <li>입력해 주신 고객 개인정보가 정확하지 않을 경우 당첨이 취소될 수 있습니다.</li>
-          <li>부당한 방법으로 응모한 고객의 경우 응모 취소 및 추후 이벤트 응모 시 불이익을 받을 수 있습니다.</li>
-        </ul>
-
-        <ul>
-          <li>매월 당첨자 확인은 루쏘소 공식 홈페이지를 통해 공개될 예정입니다.</li>
-          <li>매월 당첨 고객님께는 개별 연락을 드릴 예정입니다.</li>
-          <li>매월 증정되는 경품은 제품 재고여부에 따라 지연 및 변경될 수 있습니다.</li>
-          <li>개인정보수집 미동의 고객은 이벤트 참여가 불가합니다.</li>
-        </ul>
-
-        <ul>
-          <li>경품으로 수령하신 제품은 교환 및 환불이 불가합니다.</li>
-          <li>제세공과금은 루쏘소에서 부담하며, 소득 신고 및 제세공과금 처리를 위한 추가 서류(신분증 등)를 요청드릴 수 있습니다.</li>
-          <li>본 프로모션은 당사 사정에 의해 사전 공지 없이 내용 및 기간이 변경될 수 있습니다.</li>
-        </ul>
       </div>
     </section>
   </body>
