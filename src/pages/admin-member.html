@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>관리자 페이지</title>
+  </head>
+  <body style="display: none;">
+    <div id="wrap">
+      <header>
+        <div class="header-top">
+          <h1>ADMINISTRATOR</h1>
+          <ul>
+            <li id="logout"><a href="javascript:void(0);">로그아웃</a></li>
+          </ul>
+        </div>
+
+        <div class="gnb">
+          <nav>
+            <ul>
+              <li class="dep01">
+                <a href="admin-member.html" class="current">고객 리스트</a>
+              </li>
+              <li class="dep01">
+                <a href="admin-learningSet.html">랜딩페이지 데이터</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="container">
+        <div class="contents">
+          <div class="contents-top">
+            <h2>고객 리스트</h2>
+            <div class="search">
+              <div class="form form-search">
+                <select id="findSelect" name="" class="form-select">
+                  <option value="name">이름</option>
+                  <option value="hp">연락처</option>
+                  <option value="branch">지점</option>
+                </select>
+                <input
+                  id="findText"
+                  type="text"
+                  class="form-input"
+                  placeholder="검색어를 입력하세요."
+                  title="검색어 입력"
+                  style="
+                    padding: 5px;
+                    margin: 0;
+                    border: 1px solid #c9c9c9;
+                    border-radius: 0;
+                    font-size: 1.3rem;
+                    line-height: 1;
+                    background-color: transparent;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    vertical-align: middle;
+                    width: 300px;
+                    height: 33px;
+                  "                  
+                />
+                <button id="findBtn" type="button" class="btn btn-primary">
+                  검색
+                </button>
+                <button id="findClear" type="button" class="btn btn-primary">
+                  초기화
+                </button>                
+              </div>
+            </div>            
+          </div>
+
+          <div class="btn-wrap rt">
+            <button type="button" class="btn btn-excel">전체 리스트 다운로드</button>
+          </div>
+
+          <div class="contents-area">
+            <div class="table">
+              <table class="tb full">
+                <thead>
+                  <tr>
+                    <th>이름</th>
+                    <th>연락처</th>
+                    <th>지점</th>
+                    <th>IP</th>
+                    <th>등록날짜</th>
+                    <th>관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="btn-wrap ct">
+              <button type="button" id="prev" class="btn btn-arrow prev">
+                이전
+              </button>
+              <span id="pageNav" class="page-nav">1/1</span>
+              <button type="button" id="next" class="btn btn-arrow next">
+                다음
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loading-popup">
+      <div class="dim"></div>
+      <div class="loading"></div>
+    </div>
+  </body>
+</html>

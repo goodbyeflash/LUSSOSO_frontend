@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자 페이지</title>
+</head>
+<body style="display: none;">
+<div id="wrap">
+  <header>
+    <div class="header-top">
+      <h1>ADMINISTRATOR</h1>
+      <ul>
+        <li id="logout"><a>로그아웃</a></li>
+      </ul>
+    </div>
+
+    <div class="gnb">
+      <nav>
+        <ul>
+          <li class="dep01">
+            <a href="admin-member.html" class="current">고객 리스트</a>
+          </li>
+          <li class="dep01">
+            <a href="admin-learningSet.html">랜딩페이지 데이터</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="contents">
+      <div class="contents-top">
+        <h2>회원 정보 수정</h2>
+      </div>
+
+      <div class="contents-area">
+        <div class="table">
+          <table class="tb full">
+            <colgroup>
+              <col style="width: 10%">
+              <col style="width: 40%">
+              <col style="width: 10%">
+              <col style="width: 40%">
+            </colgroup>
+            <tbody>
+            <tr>
+              <th>이름</th>
+              <td>
+                <div class="tb-form">
+                  <input id="name" type="text">
+                </div>
+              </td>
+              <th>연락처</th>
+              <td>
+                <div class="tb-form">
+                  <input id="hp" type="text" maxlength="11">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th>지점</th>
+              <td>
+                <div class="tb-form">
+                  <input id="branch" type="text">
+                </div>
+              </td>
+              <th>IP</th>
+              <td>
+                <div class="tb-form">
+                  <div id="ip"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>등록날짜</th>
+              <td colspan="3">
+                <div class="tb-form">
+                  <div id="publishedDate"></div>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+          <div id="message" class="form-message alert rt"></div>
+          <div class="btn-wrap rt">
+            <button id="updateBtn" class="btn btn-primary">수정</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
