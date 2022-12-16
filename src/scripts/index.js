@@ -5,6 +5,9 @@ import api from './lib/api';
 window.onload = function () {
   setRandingData();
   onClickDraw();
+  document.getElementById('name').setAttribute('type', 'text');
+  document.getElementById('hp').setAttribute('type', 'text');
+  document.getElementById('branch').setAttribute('type', 'text');
 };
 
 function setRandingData() {

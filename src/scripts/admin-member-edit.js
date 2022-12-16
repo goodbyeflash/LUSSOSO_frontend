@@ -75,7 +75,7 @@ window.onload = () => {
               api('patch', `users/${_id}`, patchData, (res) => {
                 if (res.msg == 'OK') {
                   alert('수정되었습니다.');
-                  history.back();
+                  location.href = 'admin-member.html';
                 } else {
                   alert('오류가 발생하였습니다.');
                 }
