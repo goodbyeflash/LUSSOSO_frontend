@@ -21,10 +21,12 @@
 
   h1 {
     font-size: 3.2rem;
+    word-break: keep-all;
   }
 
   p {
     margin-top: 45px;
+    word-break: keep-all;
   }
 
   .inner {
